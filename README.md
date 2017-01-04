@@ -23,6 +23,7 @@
     - [Number Labelling](#number-labelling)
     - [Component-extension Pointers](#component-extension-pointers)
     - [Section Comment](#section-comment)
+- [Documentation and styleguide](#documentation-and-styleguide)
 - [Naming Conventions](#naming-conventions)
     - [BEM-like Naming](#bem-like-naming)
     - [Hyphen-delimited](#hyphen-delimited)
@@ -929,8 +930,19 @@ This type of comment is rare due to us working in highly concentrated partialsâ€
    ========================================================================= */
 ```
 
+## Documentation and styleguide
 
+As a way to improve the consistency and comunication across the designer and front-end team, we are following the Styleguide driven development methodology. One of the devs created a very usefull presentation when we first started this and you can find it [here](https://docs.google.com/a/personalcapital.com/presentation/d/17Q0HNynYGbbTPqbhp7yDZ1Ki9kvrf7JvJfZqnDV5npY/edit?usp=sharing)
 
+As you can see we are using *kss* which is a special format to write CSS documentation, which with the right tool can be parsed and converted in to a beautifull styleguide. To read more about KSS format click [here](https://github.com/kneath/kss/blob/master/SPEC.md).
+
+By now, we have a few NPM scripts that you can run to generate and serve the styleguide.
+*`npm run build-styleguide` will generate the static files of the styleguide on `styleguide/dist` folder.
+*`npm run serve-styleguide` will build the styleguide static files and serve them using `node-serve` on 127.0.0.1:8080. If you use localhost instead, this might not work since some browsers redirect to `https`
+
+*Every new reusable component should have the related KSS documentation so other devs can see and reuse the implementation.*
+
+One last thing, the CI build processes for the web app build the styleguide too, so every environment should have the styleguide under `<domain>/static/styleguide/dist/index.html`. Even production.
 
 ## Naming Conventions
 
