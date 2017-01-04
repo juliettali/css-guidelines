@@ -937,10 +937,10 @@ As a way to improve the consistency and comunication across the designer and fro
 As you can see we are using *kss* which is a special format to write CSS documentation, which with the right tool can be parsed and converted in to a beautifull styleguide. To read more about KSS format click [here](https://github.com/kneath/kss/blob/master/SPEC.md).
 
 By now, we have a few NPM scripts that you can run to generate and serve the styleguide.
-*`npm run build-styleguide` will generate the static files of the styleguide on `styleguide/dist` folder.
-*`npm run serve-styleguide` will build the styleguide static files and serve them using `node-serve` on 127.0.0.1:8080. If you use localhost instead, this might not work since some browsers redirect to `https`
+- `npm run build-styleguide` will generate the static files of the styleguide on `styleguide/dist` folder.
+- `npm run serve-styleguide` will build the styleguide static files and serve them using `node-serve` on 127.0.0.1:8080. If you use localhost instead, this might not work since some browsers redirect to `https`
 
-*Every new reusable component should have the related KSS documentation so other devs can see and reuse the implementation.*
+**Every new reusable component should have the related KSS documentation so other devs can see and reuse the implementation.**
 
 One last thing, the CI build processes for the web app build the styleguide too, so every environment should have the styleguide under `<domain>/static/styleguide/dist/index.html`. Even production.
 
